@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 gem 'rack-cors'
+gem 'devise'
+gem 'devise-jwt'
+gem 'fast_jsonapi'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
@@ -55,7 +58,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_girl_rails'
+  gem "factory_bot_rails"
   gem 'rspec-rails', '~> 3.5'
 end
 
