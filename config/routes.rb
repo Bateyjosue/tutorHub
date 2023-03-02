@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'tutors/index'
   get '/current_user', to: 'current_user#index'
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+  resources :tutors, only: [:index]
 end
