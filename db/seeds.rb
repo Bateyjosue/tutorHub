@@ -7,13 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # create a user
-user = User.create(email: 'example@example.com', password: 'password')
+user = User.create(email: 'kene@gmail.com', password: 'password')
 
 # create some tutors for the user
 tutors = [
   {
     name: 'John Doe',
-    image: 'https://example.com/john-doe.jpg',
+    image: 'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg',
     description: 'Experienced tutor in math and science',
     price: 50.0,
     city: 'San Francisco',
@@ -21,7 +21,7 @@ tutors = [
   },
   {
     name: 'Jane Smith',
-    image: 'https://example.com/jane-smith.jpg',
+    image: 'https://img.freepik.com/free-photo/close-up-shot-pretty-woman-with-perfect-teeth-dark-clean-skin-having-rest-indoors-smiling-happily-after-received-good-positive-news_273609-1248.jpg',
     description: 'English and history tutor with a passion for teaching',
     price: 40.0,
     city: 'New York',
@@ -29,7 +29,7 @@ tutors = [
   },
   {
     name: 'Bob Johnson',
-    image: 'https://example.com/bob-johnson.jpg',
+    image: 'https://img.freepik.com/free-photo/senior-man-face-portrait-wearing-bowler-hat_53876-148154.jpg',
     description: 'Expert in computer programming and web development',
     price: 60.0,
     city: 'Los Angeles',
