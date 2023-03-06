@@ -611,3 +611,48 @@ Migrating to AddrefToAppointment (20230306085930)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(256353617766672615)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-06 13:18:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jb-dev/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jb-dev/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.6ms | Allocations: 476)
+Completed 200 OK in 32ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 3353)
+
+
+Started GET "/tutors" for 127.0.0.1 at 2023-03-06 14:09:17 +0200
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 8.0ms | Allocations: 5506)
+
+
+Started GET "/appointment" for 127.0.0.1 at 2023-03-06 14:09:27 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/appointment"):
+  
+Started GET "/appointments" for 127.0.0.1 at 2023-03-06 14:09:45 +0200
+  
+ActionController::RoutingError (uninitialized constant AppointmentsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ApplicationController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/appointments" for 127.0.0.1 at 2023-03-06 14:09:55 +0200
+  
+ActionController::RoutingError (uninitialized constant AppointmentsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ApplicationController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/appointments" for 127.0.0.1 at 2023-03-06 14:17:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/appointments"):
+  
