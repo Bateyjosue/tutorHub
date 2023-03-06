@@ -549,3 +549,51 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (1143.2ms)[0m  [1m[35mCREATE DATABASE "tutorHub_development" ENCODING = 'unicode'[0m
+  [1m[35m (413.1ms)[0m  [1m[35mCREATE DATABASE "tutorHub_test" ENCODING = 'unicode'[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(256353617766672615)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20230227202654)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227202654"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddJtiToUsers (20230227210957)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "users" ADD "jti" character varying NOT NULL[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_jti" ON "users" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230227210957"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTutors (20230302100210)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "tutors" ("id" bigserial primary key, "name" character varying, "image" character varying, "description" character varying, "price" decimal, "city" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_d12b6bf098"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE INDEX "index_tutors_on_user_id" ON "tutors" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230302100210"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-06 10:32:33.437097"], ["updated_at", "2023-03-06 10:32:33.437097"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(256353617766672615)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "jti") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "example@example.com"], ["encrypted_password", "$2a$12$mX7/Cj5VOyyRUb1CYKrKme0NSrO3mv3zo0.drlqm4dIyKeiZbNgLO"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2023-03-06 10:34:39.503925"], ["updated_at", "2023-03-06 10:34:39.503925"], ["jti", "2ba531aa-5b1f-4efd-8a0a-4f2b128335e8"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTutor Create (8.5ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "image", "description", "price", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "John Doe"], ["image", "https://example.com/john-doe.jpg"], ["description", "Experienced tutor in math and science"], ["price", "50.0"], ["city", "San Francisco"], ["user_id", 1], ["created_at", "2023-03-06 10:34:39.629369"], ["updated_at", "2023-03-06 10:34:39.629369"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTutor Create (1.1ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "image", "description", "price", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jane Smith"], ["image", "https://example.com/jane-smith.jpg"], ["description", "English and history tutor with a passion for teaching"], ["price", "40.0"], ["city", "New York"], ["user_id", 1], ["created_at", "2023-03-06 10:34:39.651387"], ["updated_at", "2023-03-06 10:34:39.651387"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTutor Create (0.8ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "image", "description", "price", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Bob Johnson"], ["image", "https://example.com/bob-johnson.jpg"], ["description", "Expert in computer programming and web development"], ["price", "60.0"], ["city", "Los Angeles"], ["user_id", 1], ["created_at", "2023-03-06 10:34:39.663754"], ["updated_at", "2023-03-06 10:34:39.663754"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
