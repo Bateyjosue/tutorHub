@@ -5410,3 +5410,171 @@ Processing by TutorsController#index as HTML
 Completed 200 OK in 108ms (Views: 95.8ms | ActiveRecord: 0.4ms | Allocations: 1382)
 
 
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:13:51 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1380)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:15:36 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:15:36 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Tim West", "image"=>"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "price"=>2300, "description"=>"Major in Engineering Mathematics", "city"=>"New York", "user_id"=>2, "tutor"=>{"name"=>"Tim West", "image"=>"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "description"=>"Major in Engineering Mathematics", "price"=>2300, "city"=>"New York", "user_id"=>2}}
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:15:36 +0100
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mTutor Create (0.7ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "image", "description", "price", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tim West"], ["image", "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"], ["description", "Major in Engineering Mathematics"], ["price", "2300.0"], ["city", "New York"], ["user_id", 2], ["created_at", "2023-03-07 19:15:36.416922"], ["updated_at", "2023-03-07 19:15:36.416922"]]
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+Completed 200 OK in 54ms (Views: 0.2ms | ActiveRecord: 12.3ms | Allocations: 3614)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 1540)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:18 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:18 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 1551)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:26 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:26 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 1543)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:29 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:16:29 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 1551)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:22:38 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:22:38 +0100
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 130ms (Views: 123.5ms | ActiveRecord: 9.1ms | Allocations: 4477)
+
+
+  [1m[36mTutor Load (1.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 207ms (Views: 200.2ms | ActiveRecord: 11.4ms | Allocations: 9697)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:23:08 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:23:08 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1544)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:32:43 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 14.6ms | Allocations: 4375)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:08 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:08 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1544)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 71ms (Views: 62.6ms | ActiveRecord: 0.5ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:13 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:13 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 1550)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:17 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:17 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 93ms (Views: 20.8ms | ActiveRecord: 0.4ms | Allocations: 1595)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:36:31 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.5ms | Allocations: 1537)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:40:53 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1537)
+
+

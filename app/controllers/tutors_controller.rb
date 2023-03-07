@@ -10,13 +10,12 @@ class TutorsController < ApplicationController
     @tutor = Tutor.new(tutor_params)
     if @tutor.save
       render json: {
-        status: { success: true, message: 'Tutor created successfully' },
+        status: { success: true, message: 'Tutor created successfully' }
       }
     else
       render json: { errors: @tutor.errors.full_messages }, status: :unprocessable_entity
     end
   end
-  
 
   def destroy
     if @tutor.destroy
@@ -26,7 +25,7 @@ class TutorsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def tutor_params
     params.require(:tutor).permit(:name, :image, :description, :price, :city, :user_id)
