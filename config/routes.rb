@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  resources :tutors, only: [:index]
+  resources :tutors, only: [:index, :show, :new, :create, :destroy]
 end
