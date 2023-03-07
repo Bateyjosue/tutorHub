@@ -3929,3 +3929,1484 @@ Processing by TutorsController#index as HTML
 Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 0.6ms | Allocations: 2480)
 
 
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:24:10 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:24:10 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:24:10 +0100
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Steven", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>236, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Steven", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>236, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 21.1ms | Allocations: 558)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mTutor Load (2.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 578ms (Views: 556.1ms | ActiveRecord: 361.6ms | Allocations: 117007)
+
+
+  [1m[36mTutor Load (2.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 608ms (Views: 584.6ms | ActiveRecord: 42.4ms | Allocations: 122250)
+
+
+Started GET "/routes" for 127.0.0.1 at 2023-03-07 16:25:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:26:04 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:26:04 +0100
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:26:04 +0100
+  [1m[36mTutor Load (3.1ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 387ms (Views: 39.5ms | ActiveRecord: 20.8ms | Allocations: 15871)
+
+
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 589)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mTutor Load (1.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 712ms (Views: 513.0ms | ActiveRecord: 14.4ms | Allocations: 127950)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:29:10 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:29:10 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.0ms | Allocations: 530)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:29:11 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 1.9ms | Allocations: 2435)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 1.0ms | Allocations: 3091)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:31:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"l", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"l"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 5.5ms | Allocations: 710)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:31:01 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:31:01 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 89ms (Views: 34.5ms | ActiveRecord: 9.9ms | Allocations: 8217)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 1347)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:36:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 5.4ms | Allocations: 710)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:36:38 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:36:38 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 100ms (Views: 40.8ms | ActiveRecord: 10.5ms | Allocations: 8262)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 9.3ms | ActiveRecord: 0.8ms | Allocations: 1347)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:40:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 3.4ms | Allocations: 710)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:40:06 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:40:06 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 17.0ms | ActiveRecord: 3.8ms | Allocations: 8203)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 1356)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:42:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 4.5ms | Allocations: 710)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:42:41 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:42:41 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 21.0ms | ActiveRecord: 3.6ms | Allocations: 8219)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 1347)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:42:52 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:42:52 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 0.7ms | Allocations: 1257)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 1247)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 16:45:26 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:45:26 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>234, "city"=>"Lagos", "description"=>"Teacher in Physics", "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>234, "city"=>"Lagos"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 0.0ms | Allocations: 537)
+
+
+  
+ActionController::InvalidAuthenticityToken (HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+devise (4.9.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.6.2) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.8.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:45:26 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (3.1ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 16.6ms | ActiveRecord: 3.1ms | Allocations: 2708)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 42.8ms | ActiveRecord: 0.8ms | Allocations: 2351)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:49:53 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:49:54 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 1273)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 10.0ms | ActiveRecord: 2.2ms | Allocations: 1232)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:54:39 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:54:39 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 1246)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 1234)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:55:02 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 16:55:02 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 11.4ms | ActiveRecord: 2.2ms | Allocations: 1254)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 12.4ms | ActiveRecord: 1.3ms | Allocations: 1232)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:33:29 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:33:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 98ms (Views: 26.9ms | ActiveRecord: 13.0ms | Allocations: 11522)
+
+
+  [1m[36mTutor Load (1.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 253ms (Views: 185.4ms | ActiveRecord: 11.2ms | Allocations: 15500)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:34:54 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:34:54 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 1316)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.1ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 101ms (Views: 77.2ms | ActiveRecord: 1.1ms | Allocations: 1245)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:10 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:10 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 1230)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:15 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:15 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 1235)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 1230)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:31 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:31 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 1263)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 1230)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:35 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:35:35 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.6ms | Allocations: 1246)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1230)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:38:00 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:38:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 106ms (Views: 33.4ms | ActiveRecord: 16.4ms | Allocations: 11517)
+
+
+  [1m[36mTutor Load (0.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 283ms (Views: 216.0ms | ActiveRecord: 11.7ms | Allocations: 15549)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:38:31 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:38:31 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 2.2ms | Allocations: 1320)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 1246)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:40:44 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:40:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (3.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 161ms (Views: 61.1ms | ActiveRecord: 23.0ms | Allocations: 11544)
+
+
+  [1m[36mTutor Load (2.1ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 303ms (Views: 208.0ms | ActiveRecord: 18.8ms | Allocations: 15538)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:43:52 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:43:52 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 1340)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 1246)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:43:58 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:43:58 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 1.7ms | Allocations: 1268)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 1231)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:15 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:15 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 10.7ms | ActiveRecord: 2.4ms | Allocations: 1243)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 1231)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:26 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:26 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 1279)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 1231)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:29 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:44:29 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 1245)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1231)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:45:02 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:45:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 71ms (Views: 24.9ms | ActiveRecord: 11.3ms | Allocations: 11544)
+
+
+  [1m[36mTutor Load (1.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 227ms (Views: 175.7ms | ActiveRecord: 16.4ms | Allocations: 15576)
+
+
+  [1m[36mTutor Load (1.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:48:21 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:48:21 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.7ms | Allocations: 1304)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1246)
+
+
+Started GET "/routes" for 127.0.0.1 at 2023-03-07 18:49:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/tutors" for 127.0.0.1 at 2023-03-07 18:49:33 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.7ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 1391)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:53:33 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:53:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 117ms (Views: 43.5ms | ActiveRecord: 18.6ms | Allocations: 11544)
+
+
+  [1m[36mTutor Load (1.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 315ms (Views: 246.6ms | ActiveRecord: 14.7ms | Allocations: 15577)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:57:45 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:57:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 93ms (Views: 37.4ms | ActiveRecord: 13.3ms | Allocations: 11545)
+
+
+  [1m[36mTutor Load (3.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 378ms (Views: 285.7ms | ActiveRecord: 50.0ms | Allocations: 15648)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:57:48 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 18:57:49 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 1335)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1246)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:09:11 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:09:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#index as HTML
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 80ms (Views: 29.5ms | ActiveRecord: 14.6ms | Allocations: 11518)
+
+
+  [1m[36mTutor Load (1.9ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 256ms (Views: 201.4ms | ActiveRecord: 18.3ms | Allocations: 15557)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:09:24 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:09:25 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 0.8ms | Allocations: 1313)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 34.0ms | ActiveRecord: 0.6ms | Allocations: 1246)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:10:01 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 3643)
+
+
+  
+NameError (undefined local variable or method `room_params' for #<TutorsController:0x0000000000be28>
+
+    @tutor = Tutor.new(room_params)
+                       ^^^^^^^^^^^):
+  
+app/controllers/tutors_controller.rb:8:in `create'
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:11:05 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 18.5ms | Allocations: 4371)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass
+
+    if @room.save
+            ^^^^^):
+  
+app/controllers/tutors_controller.rb:10:in `create'
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:11:43 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.5ms | Allocations: 4336)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass
+
+      render json: @room.errors, status: :unprocessable_entity
+                        ^^^^^^^):
+  
+app/controllers/tutors_controller.rb:15:in `create'
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:21:21 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 142ms (Views: 110.3ms | ActiveRecord: 17.4ms | Allocations: 6907)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:25:31 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 9ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1011)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:26:09 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 8ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1013)
+
+
+Started GET "/current_user" for 127.0.0.1 at 2023-03-07 19:29:32 +0100
+Processing by CurrentUserController#index as HTML
+Completed 401 Unauthorized in 46ms (ActiveRecord: 0.0ms | Allocations: 1592)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:30:38 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 11ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1109)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:31:15 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 11ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1007)
+
+
+Started GET "/tutors" for 127.0.0.1 at 2023-03-07 19:31:42 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (2.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:4:in `index'
+Completed 200 OK in 348ms (Views: 9.4ms | ActiveRecord: 2.0ms | Allocations: 7745)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:36:19 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 48ms (Views: 2.1ms | ActiveRecord: 21.8ms | Allocations: 4283)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:37:02 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "city"=>"Lagos", "description"=>"Teacher in Physics", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 31ms (Views: 0.3ms | ActiveRecord: 7.0ms | Allocations: 4451)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:38:24 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 16ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1122)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:39:33 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos"}}
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1117)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:42:24 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos"}}
+Completed 422 Unprocessable Entity in 29ms (Views: 0.6ms | ActiveRecord: 9.7ms | Allocations: 3631)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:43:51 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos"}}
+Completed 422 Unprocessable Entity in 29ms (Views: 1.2ms | ActiveRecord: 8.0ms | Allocations: 3689)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:44:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos"}}
+Completed 422 Unprocessable Entity in 88ms (Views: 0.3ms | ActiveRecord: 9.5ms | Allocations: 9908)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:46:36 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 19:46:36 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (3.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 40ms (Views: 16.9ms | ActiveRecord: 3.2ms | Allocations: 2121)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 1236)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:47:23 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1201)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:58:36 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 173ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 4021)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 19:59:18 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:01:08 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 10ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1115)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:01:19 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1116)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:04:56 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:08:53 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1112)
+
+
+Started POST "/tutors" for 127.0.0.1 at 2023-03-07 20:10:32 +0100
+Processing by TutorsController#create as HTML
+  Parameters: {"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "price"=>123, "description"=>"Teacher in Physics", "city"=>"Lagos", "user_id"=>2, "tutor"=>{"name"=>"Ashley", "image"=>"https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg", "description"=>"Teacher in Physics", "price"=>123, "city"=>"Lagos", "user_id"=>2}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mTutor Create (6.4ms)[0m  [1m[32mINSERT INTO "tutors" ("name", "image", "description", "price", "city", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ashley"], ["image", "https://cdn.hswstatic.com/gif/play/0b7f4e9b-f59c-4024-9f06-b3dc12850ab7-1920-1080.jpg"], ["description", "Teacher in Physics"], ["price", "123.0"], ["city", "Lagos"], ["user_id", 2], ["created_at", "2023-03-07 19:10:35.002439"], ["updated_at", "2023-03-07 19:10:35.002439"]]
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tutors_controller.rb:11:in `create'
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 24.0ms | Allocations: 14547)
+
+
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:10:56 +0100
+Started GET "/tutors/index" for 127.0.0.1 at 2023-03-07 20:10:56 +0100
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (1.0ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 1.0ms | Allocations: 2020)
+
+
+Processing by TutorsController#index as HTML
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+  ↳ app/controllers/tutors_controller.rb:6:in `index'
+Completed 200 OK in 108ms (Views: 95.8ms | ActiveRecord: 0.4ms | Allocations: 1382)
+
+
