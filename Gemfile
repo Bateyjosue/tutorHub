@@ -74,3 +74,5 @@ group :development do
 end
 
 gem 'dotenv-rails', groups: %i[development test]
+
+gem 'rack-cors'

@@ -5,8 +5,8 @@ class TutorsController < ApplicationController
   end
 
   def create
-    @room = Tutor.new(room_params)
-    @room.user = @user
+    @tutor = Tutor.new(room_params)
+    @tutor.user = @user
     if @room.save
       render json: {
         status: { success: true, message: 'Tutor created successfully' },
@@ -27,7 +27,6 @@ class TutorsController < ApplicationController
   private 
 
   def tutor_params
-    params.require(:tutor).permit(:name, :image, :price, :description, :user_id)
+    params.require(:tutor).permit(:name, :image, :description, :price, :city, :user_id)
   end
-end
 end
