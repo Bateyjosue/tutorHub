@@ -6,11 +6,11 @@ class UsersController < ApplicationController
         else
           render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
-      end
+    end
     
       private
     
       def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation)
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
       end
 end
