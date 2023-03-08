@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'appointments/index'
+  get 'appointments/delete'
   get 'tutors/index'
   get '/current_user', to: 'current_user#index'
   devise_for :users, path: '', path_names: {
@@ -10,5 +12,11 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
   resources :tutors, only: [:index, :show, :new, :create, :destroy]
+ 
+  resources :user do
+    resources :appointments, only: [:index, :destroy, :create, :show]
+  end
+  
 end
