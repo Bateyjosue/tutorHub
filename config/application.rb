@@ -34,5 +34,19 @@ module TutorHub
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    Dotenv.load('.env.local', '.env')
+
+    # Allow CORS requests from any domain
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
+
+    # Only loads a smaller set of middleware suitable for API only apps.
+    # Middleware like session, flash, cookies can be added back manually.
+    # Skip views, helpers and assets when generating a new resource.
+    config.api_only = true
   end
 end
