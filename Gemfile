@@ -6,6 +6,9 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'fast_jsonapi'
 gem 'rack-cors'
+gem 'rswag'
+gem 'bcrypt'
+gem 'jwt'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
@@ -60,6 +63,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.5'
+  gem 'rswag-specs'
 end
 
 group :development do
