@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_130012) do
     t.integer "user_id"
     t.integer "tutor_id"
   end
-
+  
   create_table "tutors", force: :cascade do |t|
     t.string "name"
     t.string "image"
