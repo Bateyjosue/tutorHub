@@ -1,5 +1,5 @@
 require 'swagger_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.describe '/appointments', type: :request do
   path '/users/{user_id}/appointments' do
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
@@ -179,3 +179,5 @@ RSpec.describe '/appointments', type: :request do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

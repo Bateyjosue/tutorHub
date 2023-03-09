@@ -1,5 +1,5 @@
 require 'swagger_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.describe '/tutors', type: :request do
   path '/tutors' do
     get('list tutors') do
@@ -132,3 +132,5 @@ RSpec.describe '/tutors', type: :request do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength
