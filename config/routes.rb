@@ -21,4 +21,6 @@ Rails.application.routes.draw do
     resources :appointments, only: [:index, :destroy, :create, :show]
   end
   
+  get '/csrf_token', to: 'application#csrf_token'
+
 end

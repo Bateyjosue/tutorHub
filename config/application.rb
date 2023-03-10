@@ -44,6 +44,11 @@ module TutorHub
       end
     end
 
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_my_app_session'
+
+    config.action_controller.forgery_protection_origin_check = false
+
+
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.

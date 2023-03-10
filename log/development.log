@@ -242,7 +242,6 @@ railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
 sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
 rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
 activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
@@ -253,6 +252,7 @@ actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
 rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
 rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+
 railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
 puma (5.6.5) lib/puma/configuration.rb:252:in `call'
 puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
@@ -260,6 +260,7 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+
 Started GET "/login" for 127.0.0.1 at 2023-02-27 22:58:13 +0200
 Processing by Users::SessionsController#new as HTML
   Rendering layout layouts/application.html.erb
@@ -357,9 +358,6 @@ Processing by Users::RegistrationsController#create as */*
   Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "registration"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
 Can't verify CSRF token authenticity.
 Completed 422 Unprocessable Entity in 1ms (Allocations: 628)
-
-
-  
 ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
   
 actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
@@ -433,7 +431,7 @@ railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
 sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+
 rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
 activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
@@ -444,6 +442,7 @@ actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
 rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
 rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+
 railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
 puma (5.6.5) lib/puma/configuration.rb:252:in `call'
 puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
@@ -532,7 +531,7 @@ railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
 sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
-rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+
 rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
 activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
@@ -543,6 +542,7 @@ actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
 rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
 actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
 rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+
 railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
 puma (5.6.5) lib/puma/configuration.rb:252:in `call'
 puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
@@ -550,6 +550,7 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(256353617766672615)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (13.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateTutors (20230302100210)
