@@ -81,10 +81,9 @@ ExpertHub is a tutor reservasation website that provide the public with an easy 
 - [Live Demo]()
 
 ## [API Documentation](https://experthub-production.up.railway.app/api-docs/index.html) <a name="api-documentation"></a>
+<img width="715" alt="api-docs" src="api1.png">
 
-<!-- <img width="715" alt="api-docs" src="https://user-images.githubusercontent.com/86082070/217821271-c90e1a90-e81d-4ed2-b4ce-08e9d960a7e4.png">
-
-<img width="703" alt="api-docs" src="https://user-images.githubusercontent.com/86082070/217821444-053f5958-6983-4105-a562-2860e98cebf7.png"> -->
+<img width="703" alt="api-docs" src="api22.png"> 
 
 
 
