@@ -27,8 +27,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 ExpertHub <a name="about-project"></a>
-ExpertHub is a tutor reservasation website that provide the public with an easy and convenient way to rent tutor and offer teaching services to people.
+# 📖 tutorHub <a name="about-project"></a>
+tutorHub is a tutor reservasation website that provide the public with an easy and convenient way to rent tutor and offer teaching services to people.
 
 - [Frontend](https://github.com/username-forGithub/tutorHub-front)<a name="rails-backend"></a>
 - [Kanban Board](https://github.com/users/Bateyjosue/projects/4/views/1)<a name="kanban-board"></a>
